@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+/* Container grid  style*/
+.grid-container{ 
+    background-color: rgb(255, 255, 255);
+    font-family: 'Vollkorn', serif;
+    min-width: 320px;
+    max-width: 1024px;
+    /* height: 100vh; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    grid-template-areas: "header" "navigation" "main" "footer";
+}
+header, .navigation, main, footer {
+    border: solid 3px olivedrab
+}
+.line {
+    border-top: 3px solid #5a03fc;
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+  }
+  .placeholder1{
+      width: 600px;
+      height: 60px;
+      background-color: rgb(177, 245, 245);
+  }
+  .placeholder2{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(170, 245, 195);
+  }
+/* header style */
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    color: #fff;
+    background-color: #6dadbd;
+    padding: 5px 20px;
+}
+    .logo {
+        font-size: 1.1em;
+        font-weight: 300;
+        position: relative;
+        cursor: pointer;
+     }
+.bell-icon {
+    width: 20px;
+    height:20px;
+}
+.member-image{
+    width: 60px;
+    height:60px;
+}
+/* .bell-icon, .member-image, #notifications{
+    align-items: flex-end;
+} */
+
+/* Sidebar nav style */
+.navigation{
+    grid-area: navigation;
+    background-color: #6dadbd;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 2px;
+}
+.navigation img{
+    width: 40px;
+    height: 40px;
+    margin: 2px 2px;
+}
+main{
+    grid-area: main;
+    background-color: aliceblue;
+}
+footer {
+    grid-area: footer;
+    background-color:  #6dadbd;
+}
+
+
+
+
+/* Media Query */
+@media (min-width: 768px){
+
+    .grid-container{
+        grid-template-columns: 65px 1fr;
+        grid-template-areas​:​
+        "header header"
+        ​"navigation main"​
+        "footer footer";
+        /* grid-template-areas: "header header header"
+                                "navigation main main"
+                                "navigation main main"
+                                "footer footer footer" */
+
+    }
+}
