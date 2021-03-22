@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-/* Container grid  style*/
+    /* Container grid  style*/
 .grid-container{ 
     background-color: rgb(255, 255, 255);
     font-family: 'Vollkorn', serif;
@@ -16,7 +16,7 @@
     grid-template-areas: "header" "navigation" "main" "footer";
 }
 header, .navigation, main, footer {
-    border: solid 3px olivedrab
+    border: solid 3px olivedrab;
 }
 .line {
     border-top: 3px solid #5a03fc;
@@ -86,22 +86,10 @@ footer {
     background-color:  #6dadbd;
 }
 
-
-
-
-/* Media Query */
+    /* Media Query */
 @media (min-width: 768px){
-
     .grid-container{
         grid-template-columns: 65px 1fr;
-        grid-template-areas​:​
-        "header header"
-        ​"navigation main"​
-        "footer footer";
-        /* grid-template-areas: "header header header"
-                                "navigation main main"
-                                "navigation main main"
-                                "footer footer footer" */
-
+        grid-template-areas​:​ "header header" ​"navigation main" "footer footer";
     }
 }

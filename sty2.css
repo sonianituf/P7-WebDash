@@ -35,3 +35,7 @@ footer {
 }
 
 }
+ /* grid-template-areas: "header header header"
+                                "navigation main main"
+                                "navigation main main"
+                                "footer footer footer" */
