@@ -5,23 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Dashboard App</title>
-    
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
   </head>
 <body class="grid-container">
     <!-- header -->
     <header class="header">
-        <h1 class="logo">YourApp</h1>
-        <div class="bell" id="bell">
-          <!-- SHOULD THIS BE AN SVG? -->
-            <img class="bell-icon" src="images/icons/icon-bell.svg" alt="bell">
-            <div id="notifications"></div>
+        <h1 class="logo">Your<span>App</span></h1>
+        <div class="profile-info">
+            <div class="bell" id="bell">
+                <svg class="bell-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    <g id="_x36__6_">
+                    <g>
+                      <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                      c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                    </g>
+                    </g>
+                </svg>
+                <div id="notifications">
+                  <!-- this text will hopefully disapear when JS code comes here -->
+                  <img src="/images/icons/notification.svg" alt="Notification icon">
+                </div>
+              </div>
+          <img src="images/member-1.jpg" alt="Profile image">
+					<h4>Sonia Nitu</h4>
         </div>
-        <img class="member-image" src="images/member-1.jpg" alt="login-image">
-        <h4>Josh Sullivan</h4>
+       
     </header>
 
     <!-- side bar nav -->
@@ -73,11 +85,11 @@
                 <div class="widget-container-full">
                     <!-- element line graph will attach to -->
                   <canvas id="traffic-chart" ></canvas>
-                  <div class="placeholder1"></div>
                 </div>   
+               
               </section>
         
-        <div class="line"></div>
+     
 
               <!-- div class="wrapSmallCharts" 2-->
               <div class="wrapSmallCharts">
@@ -97,9 +109,6 @@
                     </div>
                   </section>
               </div>
-        
-        <div class="line"></div>
-
            <!-- social stats 3-->
                   <section class="social-stats">
                     <h3>SOCIAL STATS</h3>
@@ -163,7 +172,6 @@
                     </div>
                   </section>
 
-        <div class="line"></div>
       <!-- Members wrap 4 -->
         <div class="member-wrap">
           <!-- new members -->
@@ -206,19 +214,6 @@
             </div>
           </section>
 
-          <section class="message">
-            <h3>MESSAGE USER</h3>
-              <form autocomplete = "off" action="" class="widget-container">
-                <div id="autocomplete">
-                  <input type="text" id="userField" class="form-field" placeholder="Search for User">
-                  <select class="autoList"></select>
-                </div>
-                <textarea id="messageField" class="form-area" placeholder="Message for User" rows="5" ></textarea>
-                <button class="button-primary" id="send">SEND</button>
-              </form>
-          </section>
-
-          <div class="line member-line"></div>
           <!-- recent activity -->
           <section class="recent-activity">
               <h3>RECENT ACTIVITY</h3>
@@ -266,6 +261,17 @@
                   </div>         
                 </div>  
           </section>
+          <section class="message">
+            <h3>MESSAGE USER</h3>
+              <form autocomplete = "off" action="" class="widget-container">
+                <div id="autocomplete">
+                  <input type="text" id="userField" class="form-field" placeholder="Search for User">
+                  <select class="autoList"></select>
+                </div>
+                <textarea id="messageField" class="form-area" placeholder="Message for User" rows="5" ></textarea>
+                <button class="button-primary" id="send">SEND</button>
+              </form>
+          </section>
           <section class="setting" id="settings">
             <h3>SETTINGS</h3>
                 <!-- custom CSS toggle code STILL NEEDS DOING!-->          
@@ -300,7 +306,6 @@
           </section>
           <!-- end of div-memberswrap -->
         </div>  
-        <div class="line"></div>
             <!-- end of  main-content div-->
     </div>
   </main>
