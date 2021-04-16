@@ -85,13 +85,7 @@ header{
 }
 .alert{
     background-color: rgba(102, 204, 102, .7);
-    height: 20px;
     border-radius: 5px;
-    display: flex;
-    font-weight: bolder;
-    height: 2em;
-    justify-content: center;
-    padding: 5px 0;
     margin: auto;
     width: 95%;
 }
@@ -134,17 +128,7 @@ header{
     padding-top: 3px;
     text-align: right;
 }
-.alert-banner{
-    background-color: rgba(102, 204, 102, .7);
-    border-radius: 5px;
-    display: flex;
-    font-weight: bolder;
-    /* height: 2em; */
-    justify-content: center;
-   
-    margin: auto;
-    width: 95%;
-}
+
 .traffic{
     border-bottom: blueviolet solid 2px;
 }
@@ -229,6 +213,8 @@ footer {
         }
         .main-container{
             grid-template-columns: 50%;
+            /* suggested to use a in-max value 
+            grid-auto-rows: minmax(70px, auto) */
             grid-template-rows: 6;
         }
         .main-header{
